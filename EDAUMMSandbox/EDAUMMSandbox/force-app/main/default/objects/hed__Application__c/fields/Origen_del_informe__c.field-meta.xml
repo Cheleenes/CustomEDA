@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Origen_del_informe__c</fullName>
+    <externalId>false</externalId>
+    <label>Origen del informe</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Visita a escuela</fullName>
+                <default>false</default>
+                <label>Visita a escuela</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Referido</fullName>
+                <default>false</default>
+                <label>Referido</label>
+            </value>
+            <value>
+                <fullName>Convenio empresa</fullName>
+                <default>false</default>
+                <label>Convenio empresa</label>
+            </value>
+            <value>
+                <fullName>Soy exalumno</fullName>
+                <default>false</default>
+                <label>Soy exalumno</label>
+            </value>
+            <value>
+                <fullName>Me contactaron por teléfono</fullName>
+                <default>false</default>
+                <label>Me contactaron por teléfono</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final__c</fullName>
+    <externalId>false</externalId>
+    <label>Final</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inscrito</fullName>
+                <default>false</default>
+                <label>Inscrito</label>
+            </value>
+            <value>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+                <label>Interesado</label>
+            </value>
+            <value>
+                <fullName>Matriculado</fullName>
+                <default>false</default>
+                <label>Matriculado</label>
+            </value>
+            <value>
+                <fullName>Cita Agendada</fullName>
+                <default>false</default>
+                <label>Cita Agendada</label>
+            </value>
+            <value>
+                <fullName>Cita asistida</fullName>
+                <default>false</default>
+                <label>Cita asistida</label>
+            </value>
+            <value>
+                <fullName>Compromiso de pago</fullName>
+                <default>false</default>
+                <label>Compromiso de pago</label>
+            </value>
+            <value>
+                <fullName>Cita reagendada</fullName>
+                <default>false</default>
+                <label>Cita reagendada</label>
+            </value>
+            <value>
+                <fullName>Programado</fullName>
+                <default>false</default>
+                <label>Programado</label>
+            </value>
+            <value>
+                <fullName>Programado por matricula</fullName>
+                <default>false</default>
+                <label>Programado por matricula</label>
+            </value>
+            <value>
+                <fullName>Contestador</fullName>
+                <default>false</default>
+                <label>Contestador</label>
+            </value>
+            <value>
+                <fullName>Cuelga en espera</fullName>
+                <default>false</default>
+                <label>Cuelga en espera</label>
+            </value>
+            <value>
+                <fullName>Ilocalizable por horarios</fullName>
+                <default>false</default>
+                <label>Ilocalizable por horarios</label>
+            </value>
+            <value>
+                <fullName>Llamada cortada</fullName>
+                <default>false</default>
+                <label>Llamada cortada</label>
+            </value>
+            <value>
+                <fullName>NO CONECTA</fullName>
+                <default>false</default>
+                <label>NO CONECTA</label>
+            </value>
+            <value>
+                <fullName>NO CONTESTA</fullName>
+                <default>false</default>
+                <label>NO CONTESTA</label>
+            </value>
+            <value>
+                <fullName>Prueba</fullName>
+                <default>false</default>
+                <label>Prueba</label>
+            </value>
+            <value>
+                <fullName>Telefono equivocado</fullName>
+                <default>false</default>
+                <label>Telefono equivocado</label>
+            </value>
+            <value>
+                <fullName>Telefono no existe</fullName>
+                <default>false</default>
+                <label>Telefono no existe</label>
+            </value>
+            <value>
+                <fullName>Transferencia</fullName>
+                <default>false</default>
+                <label>Transferencia</label>
+            </value>
+            <value>
+                <fullName>Broma</fullName>
+                <default>false</default>
+                <label>Broma</label>
+            </value>
+            <value>
+                <fullName>Datos incorrectos</fullName>
+                <default>false</default>
+                <label>Datos incorrectos</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Matriculado en otra universidad</fullName>
+                <default>false</default>
+                <label>Matriculado en otra universidad</label>
+            </value>
+            <value>
+                <fullName>No es bachiller</fullName>
+                <default>false</default>
+                <label>No es bachiller</label>
+            </value>
+            <value>
+                <fullName>No es profesional</fullName>
+                <default>false</default>
+                <label>No es profesional</label>
+            </value>
+            <value>
+                <fullName>No volver a llamar</fullName>
+                <default>false</default>
+                <label>No volver a llamar</label>
+            </value>
+            <value>
+                <fullName>Programa no se ajusta a su necesidad</fullName>
+                <default>false</default>
+                <label>Programa no se ajusta a su necesidad</label>
+            </value>
+            <value>
+                <fullName>Ya se matriculo en otro programa</fullName>
+                <default>false</default>
+                <label>Ya se matriculo en otro programa</label>
+            </value>
+            <value>
+                <fullName>Aspirante gestionado por la universidad</fullName>
+                <default>false</default>
+                <label>Aspirante gestionado por la universidad</label>
+            </value>
+            <value>
+                <fullName>Cambio de modalidad o programa</fullName>
+                <default>false</default>
+                <label>Cambio de modalidad o programa</label>
+            </value>
+            <value>
+                <fullName>Embarazo</fullName>
+                <default>false</default>
+                <label>Embarazo</label>
+            </value>
+            <value>
+                <fullName>Es alumno activo de la universidad</fullName>
+                <default>false</default>
+                <label>Es alumno activo de la universidad</label>
+            </value>
+            <value>
+                <fullName>Modalidad no le conviene</fullName>
+                <default>false</default>
+                <label>Modalidad no le conviene</label>
+            </value>
+            <value>
+                <fullName>Motivos personales</fullName>
+                <default>false</default>
+                <label>Motivos personales</label>
+            </value>
+            <value>
+                <fullName>No hay sedes en la zona o region donde vive</fullName>
+                <default>false</default>
+                <label>No hay sedes en la zona o region donde vive</label>
+            </value>
+            <value>
+                <fullName>No obtuvo beca adecuada</fullName>
+                <default>false</default>
+                <label>No obtuvo beca adecuada</label>
+            </value>
+            <value>
+                <fullName>No obtuvo permiso en el trabajo</fullName>
+                <default>false</default>
+                <label>No obtuvo permiso en el trabajo</label>
+            </value>
+            <value>
+                <fullName>No se ajusta a la jornada</fullName>
+                <default>false</default>
+                <label>No se ajusta a la jornada</label>
+            </value>
+            <value>
+                <fullName>No se conformo grupo</fullName>
+                <default>false</default>
+                <label>No se conformo grupo</label>
+            </value>
+            <value>
+                <fullName>No tiene capacidad de pago</fullName>
+                <default>false</default>
+                <label>No tiene capacidad de pago</label>
+            </value>
+            <value>
+                <fullName>No tiene tiempo</fullName>
+                <default>false</default>
+                <label>No tiene tiempo</label>
+            </value>
+            <value>
+                <fullName>Precio muy alto</fullName>
+                <default>false</default>
+                <label>Precio muy alto</label>
+            </value>
+            <value>
+                <fullName>Problemas de salud</fullName>
+                <default>false</default>
+                <label>Problemas de salud</label>
+            </value>
+            <value>
+                <fullName>Problemas familiares</fullName>
+                <default>false</default>
+                <label>Problemas familiares</label>
+            </value>
+            <value>
+                <fullName>Se registro por engano</fullName>
+                <default>false</default>
+                <label>Se registro por engano</label>
+            </value>
+            <value>
+                <fullName>Siguiente cohorte</fullName>
+                <default>false</default>
+                <label>Siguiente cohorte</label>
+            </value>
+            <value>
+                <fullName>Viaje programado</fullName>
+                <default>false</default>
+                <label>Viaje programado</label>
+            </value>
+            <value>
+                <fullName>Duplicado</fullName>
+                <default>false</default>
+                <label>Duplicado</label>
+            </value>
+            <value>
+                <fullName>Factores economicos</fullName>
+                <default>false</default>
+                <label>Factores economicos</label>
+            </value>
+            <value>
+                <fullName>No tenemos el programa de su interes</fullName>
+                <default>false</default>
+                <label>No tenemos el programa de su interes</label>
+            </value>
+            <value>
+                <fullName>No tiene interes</fullName>
+                <default>false</default>
+                <label>No tiene interes</label>
+            </value>
+            <value>
+                <fullName>Programado a otro telefono</fullName>
+                <default>false</default>
+                <label>Programado a otro telefono</label>
+            </value>
+            <value>
+                <fullName>Redireccionado</fullName>
+                <default>false</default>
+                <label>Redireccionado</label>
+            </value>
+            <value>
+                <fullName>Final 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Final 1</label>
+            </value>
+            <value>
+                <fullName>Final 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Final 2</label>
+            </value>
+            <value>
+                <fullName>Final 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Final 3</label>
+            </value>
+            <value>
+                <fullName>Final 4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Final 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>hed__Default_Contact_Language_Fluency__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Fluency value automatically set on newly created Contact Language records when users set the Primary Language lookup field on a Contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>El valor de Fluidez se establece automáticamente en registros de Idioma de contacto recién creados cuando los usuarios establecen el campo de búsqueda Idioma principal en un contacto.</inlineHelpText>
+    <label>Default Contact Language Fluency</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

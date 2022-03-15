@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubEtapa__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Etapa</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Por llenar formulario</fullName>
+                <default>false</default>
+                <label>Por llenar formulario</label>
+            </value>
+            <value>
+                <fullName>Formulario enviado</fullName>
+                <default>false</default>
+                <label>Formulario enviado</label>
+            </value>
+            <value>
+                <fullName>Formulario completo</fullName>
+                <default>false</default>
+                <label>Formulario completo</label>
+            </value>
+            <value>
+                <fullName>Formulario pendiente</fullName>
+                <default>false</default>
+                <label>Formulario pendiente</label>
+            </value>
+            <value>
+                <fullName>Formulario pendiente interesado</fullName>
+                <default>false</default>
+                <label>Formulario pendiente interesado</label>
+            </value>
+            <value>
+                <fullName>Solicitar requisitos</fullName>
+                <default>false</default>
+                <label>Solicitar requisitos</label>
+            </value>
+            <value>
+                <fullName>Requisitos solicitados</fullName>
+                <default>false</default>
+                <label>Requisitos solicitados</label>
+            </value>
+            <value>
+                <fullName>Requisitos completos</fullName>
+                <default>false</default>
+                <label>Requisitos completos</label>
+            </value>
+            <value>
+                <fullName>Requisitos pendientes</fullName>
+                <default>false</default>
+                <label>Requisitos pendientes</label>
+            </value>
+            <value>
+                <fullName>Requisitos pendiente interesado</fullName>
+                <default>false</default>
+                <label>Requisitos pendiente interesado</label>
+            </value>
+            <value>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+                <label>Descartado</label>
+            </value>
+            <value>
+                <fullName>Solicitar pago</fullName>
+                <default>false</default>
+                <label>Solicitar pago</label>
+            </value>
+            <value>
+                <fullName>Pago solicitado</fullName>
+                <default>false</default>
+                <label>Pago solicitado</label>
+            </value>
+            <value>
+                <fullName>Pago completo</fullName>
+                <default>false</default>
+                <label>Pago completo</label>
+            </value>
+            <value>
+                <fullName>Pago pendiente</fullName>
+                <default>false</default>
+                <label>Pago pendiente</label>
+            </value>
+            <value>
+                <fullName>Pendiente pago interesado</fullName>
+                <default>false</default>
+                <label>Pendiente pago interesado</label>
+            </value>
+            <value>
+                <fullName>Trámite apoyo académico</fullName>
+                <default>false</default>
+                <label>Trámite apoyo académico</label>
+            </value>
+            <value>
+                <fullName>Completo</fullName>
+                <default>false</default>
+                <label>Completo</label>
+            </value>
+            <value>
+                <fullName>En proceso de baja</fullName>
+                <default>false</default>
+                <label>En proceso de baja</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Interesado</controllingFieldValue>
+            <valueName>Por llenar formulario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interesado</controllingFieldValue>
+            <valueName>Formulario enviado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interesado</controllingFieldValue>
+            <valueName>Formulario completo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interesado</controllingFieldValue>
+            <valueName>Formulario pendiente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interesado</controllingFieldValue>
+            <valueName>Formulario pendiente interesado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preinscrito</controllingFieldValue>
+            <valueName>Solicitar requisitos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preinscrito</controllingFieldValue>
+            <valueName>Requisitos solicitados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preinscrito</controllingFieldValue>
+            <valueName>Requisitos completos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preinscrito</controllingFieldValue>
+            <valueName>Requisitos pendientes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preinscrito</controllingFieldValue>
+            <valueName>Requisitos pendiente interesado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Solicitar pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Pago solicitado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Pago completo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Pago pendiente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Pendiente pago interesado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inscrito</controllingFieldValue>
+            <valueName>Trámite apoyo académico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admitido</controllingFieldValue>
+            <valueName>Completo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admitido</controllingFieldValue>
+            <valueName>En proceso de baja</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

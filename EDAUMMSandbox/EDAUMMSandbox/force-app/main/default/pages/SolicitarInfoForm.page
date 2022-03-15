@@ -1,0 +1,340 @@
+<apex:page contentType="text/html; CHARSET=UTF-8" Controller="SolicitarInfoController" docType="html-5.0" standardStylesheets="false"  sidebar="false" showHeader="false">
+    <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-5629173-15', 'auto', {'allowLinker': true});
+			ga('require', 'linker');
+			ga('linker:autoLink', ['force.com']);
+			ga('send', 'pageview');
+		</script>
+    <apex:pageBlock mode="maindetail">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/>
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
+                <apex:stylesheet value="{!$Resource.SolicitarInfoStyles}"/>
+                    <script>
+                    function phoneIsValid (phone) {
+                    if(phone.length != 10) { 
+                        return false;
+                    }
+                    return phone.match(/^[0-9\s(-)]*$/);
+                }
+                
+                function emailIsValid (email) {
+                    return email.match(/\S+@\S+\.\S+/);
+                }
+            
+            function hideInputs(){
+                document.querySelector('[id$="programaDiv"]').style.display='none';
+                document.querySelector('[id$="modalidadDiv"]').style.display='none';
+                document.querySelector('[id$="nivelDeEstudioDiv"]').style.display='none';
+                document.querySelector('[id$="areaDeEstudioDiv"]').style.display='none';
+                document.querySelector('[id$="sede"]').disabled = false;
+            }
+            
+            function validateSubmitFunc(){
+                document.getElementById('first_name_error').classList.add("error_hidden");
+                document.getElementById('last_name_error').classList.add("error_hidden");
+                document.getElementById('phone_error').classList.add("error_hidden");
+                document.getElementById('email_error').classList.add("error_hidden");
+                document.getElementById('nivelDeEstudio_error').classList.add("error_hidden");
+                document.getElementById('programa_error').classList.add("error_hidden");
+                document.getElementById('areaDeEstudio_error').classList.add("error_hidden");
+                document.getElementById('modalidad_error').classList.add("error_hidden");
+                document.getElementById('sede_error').classList.add("error_hidden");
+                
+                var error = false;
+                if(document.querySelector('[id$="first_name"]').value.length == 0){
+                    document.getElementById('first_name_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="last_name"]').value.length == 0){
+                    document.getElementById('last_name_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(!phoneIsValid(document.querySelector('[id$="phone"]').value)){
+                    document.getElementById('phone_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(!emailIsValid(document.querySelector('[id$="email"]').value)){
+                    document.getElementById('email_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="nivelDeEstudio"]').value == '--None--'){
+                    document.getElementById('nivelDeEstudio_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="programa"]').value == '--None--'){
+                    document.getElementById('programa_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="areaDeEstudio"]').value == '--None--'){
+                    document.getElementById('areaDeEstudio_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="modalidad"]').value == '--None--'){
+                    document.getElementById('modalidad_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(document.querySelector('[id$="sede"]').value == '--None--' && document.querySelector('[id$="modalidad"]').value == 'PRESENCIAL'){
+                    document.getElementById('sede_error').classList.remove("error_hidden");
+                    error = true;
+                }
+                if(error){
+                    
+                    return false;   
+                }
+                else{
+                    saveAccount();
+                    return true;
+                }
+            }
+            </script>
+            <div class="container">
+
+                <apex:pageBlock >
+                    <apex:pageMessages />
+                </apex:pageBlock>
+                <h2 class="text-center">¿Tienes dudas o necesitas ayuda? <br/><small>Uno de nuestros asesores se comunicará contigo para contarte más sobre UMM.</small></h2>
+                <apex:form target="parent" id="formulario">
+                    <apex:actionFunction reRender="nivelDeEstudio" action="{!getNiveldeEstudio}" name="getNivel"/>
+                    <apex:actionFunction reRender="areaDeEstudio" action="{!getAreadeEstudio}" name="getArea"/>
+                    <apex:actionFunction reRender="modalidad" action="{!getModalidades}" name="getMod"/>
+                    <apex:actionFunction reRender="programa" action="{!getProgramas}" name="getProg"/>
+                    <apex:actionFunction reRender="sede" action="{!getSedes}" name="getSede"/>
+                    <apex:actionFunction reRender="site" action="{!getSite}" name="getSite"/>
+                    
+ 
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <!--<div class="col-25"> -->
+                            <!--<label for="first_name">Nombre</label>-->
+                            <apex:inputText id="first_name" value="{!alu.FirstName}" maxlength="40" size="20" html-placeholder="Nombre" required="true"/>
+                            <div id="first_name_error" class="error error_hidden">
+                                <p>
+                                    El nombre es obligatorio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <apex:inputText id="last_name" value="{!alu.LastName}" maxlength="80" size="20" html-placeholder="Apellido"  required="true"/>
+                            <div id="last_name_error" class="error error_hidden">
+                                <p>
+                                    El apellido es obligatorio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <apex:inputText id="phone" value="{!alu.Phone}" label="Phone" maxlength="40" size="20" html-placeholder="Teléfono..."  required="true"/>
+                            <div id="phone_error" class="error error_hidden">
+                                <p>
+                                    Favor de introducir un número telefónico de 10 digitos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <apex:inputText id="email" value="{!alu.Email}" label="Email" maxlength="80" size="20" html-placeholder="Correo electrónico..."  required="true"/>
+                            <div id="email_error" class="error error_hidden">
+                                <p>
+                                    Favor de introducir una cuenta de correo válida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group" id="nivelDeEstudioDiv">
+                            <label id="lblNivelEstudio" for="country">Nivel de Estudio</label>
+                            <apex:selectList size="1" multiselect="false" value="{!Nivel_de_Estudio}" id="nivelDeEstudio" required="true">
+                                <apex:actionSupport event="onchange" reRender="programa,sede"/>
+                                <apex:selectOptions value="{!NiveldeEstudio}"></apex:selectOptions>
+                            </apex:selectList>
+                            <div id="nivelDeEstudio_error" class="error error_hidden">
+                                <p>
+                                    Seleccione un nivel de estudio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group" id="areaDeEstudioDiv">
+                            <label id="lblAreaEstudio" for="areaDeEstudio">Área de Estudio</label>
+                            <apex:selectList size="1" multiselect="false" value="{!Area_de_Estudio}" id="areaDeEstudio" required="true">
+                                <apex:actionSupport event="onchange" reRender="programa,sede"/>
+                                <apex:selectOptions value="{!AreadeEstudio}"></apex:selectOptions>
+                            </apex:selectList>
+                            <div id="areaDeEstudio_error" class="error error_hidden">
+                                <p>
+                                    Seleccione un área de estudio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group" id="modalidadDiv">
+                            <label id="lblModalidad" for="modalidad">Modalidad</label>
+                            <apex:selectList size="1" multiselect="false" value="{!formModalidad}" id="modalidad" required="true">
+                                <apex:actionSupport event="onchange" reRender="programa,sede,Site"/>
+                                <apex:selectOptions value="{!Modalidades}"></apex:selectOptions>
+                            </apex:selectList>
+                            <div id="modalidad_error" class="error error_hidden">
+                                <p>
+                                    Seleccione una modalidad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group" id="programaDiv">
+                            <label id="lblPrograma" for="programa">Programa</label>
+                            <apex:selectList size="1" multiselect="false" value="{!formPrograma}" id="programa" required="true">
+                                <apex:actionSupport event="onchange" reRender="sede,Site"/>
+                                <apex:selectOptions id="selectProgramas" value="{!Programas}"></apex:selectOptions>
+                            </apex:selectList>
+                            <div id="programa_error" class="error error_hidden">
+                                <p>
+                                    Seleccione un programa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="country">Sede</label>
+                            <apex:selectList size="1" multiselect="false" value="{!formSede}" id="sede">
+                                <apex:actionSupport event="onchange" reRender="Site"/>
+                                <apex:selectOptions value="{!Sedes}"></apex:selectOptions>
+                            </apex:selectList>
+                            <div id="sede_error" class="error error_hidden">
+                                <p>
+                                    Seleccione la sede.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="country">Site</label>
+                            <apex:selectList size="1" multiselect="false" value="{!formSite}" id="Site">
+                                <apex:actionSupport event="onchange" reRender="out"/>
+                                <apex:selectOptions value="{!Site}"></apex:selectOptions>
+                            </apex:selectList>
+                        </div>
+                    </div>
+                    
+                    <apex:inputHidden value="{!baseURL}" id="pageBaseURL"/>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <apex:commandButton action="{!saveAccount}" onclick="return validateSubmitFunc();" Value="Solicitar información" styleClass="submit" id="boton"/>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </apex:pageBlock>
+        <script>
+        /* Forzar flujo */    
+        document.querySelector('[id$="areaDeEstudio"]').disabled = false;
+        //document.querySelector('[id$="modalidad"]').disabled = true;
+        document.querySelector('[id$="sede"]').disabled = true;
+        document.querySelector('[id$="programa"]').disabled = true;
+        document.querySelector('[id$="Site"]').disabled = true;
+        
+        ////Get values from URL
+        function getUrlVars(urlTexto) {
+            var vars = {};
+            var parts = urlTexto.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+        var url = decodeURIComponent(document.referrer);
+        var variables = getUrlVars(url);
+        document.querySelector('[id$="pageBaseURL"]').value = url;
+        console.log('setbaseURL called'+url);
+        console.log(Object.keys(variables).length);
+        if(Object.keys(variables).length < 1){
+            url = decodeURIComponent(document.location.href);
+            variables = getUrlVars(url);
+            console.log(Object.keys(variables).length);
+        }
+        if(variables['utm_source'] != null && variables['utm_source'] != undefined ){
+            document.querySelector('[id$="utm_source"]').value = variables['utm_source'];
+        }
+        if(variables['utm_medium'] != null && variables['utm_medium'] != undefined ){
+            document.querySelector('[id$="utm_medium"]').value = variables['utm_medium'];
+        }
+        if(variables['utm_campaign'] != null && variables['utm_campaign'] != undefined ){
+            document.querySelector('[id$="utm_campaign"]').value = variables['utm_campaign'];
+        }
+        if(variables['utm_term'] != null && variables['utm_term'] != undefined ){
+            document.querySelector('[id$="utm_term"]').value = variables['utm_term'];
+        }
+        if(variables['utm_content'] != null && variables['utm_content'] != undefined ){
+            document.querySelector('[id$="utm_content"]').value = variables['utm_content'];
+        }
+        if(variables['origen'] != null && variables['origen'] != undefined ){
+            document.querySelector('[id$="utm_origen"]').value = variables['origen'];
+        }
+        if(variables['nombre'] != null && variables['nombre'] != undefined ){
+            document.querySelector('[id$="first_name"]').value = variables['nombre'];
+        }
+        if(variables['apellido'] != null && variables['apellido'] != undefined ){
+            document.querySelector('[id$="last_name"]').value = variables['apellido'];
+        }
+        if(variables['correo'] != null && variables['correo'] != undefined ){
+            var stringCorreo = variables['correo'];
+            var newStringCorreo = stringCorreo.replace('%40','@');
+            document.querySelector('[id$="email"]').value = newStringCorreo;
+        }
+        if(variables['nivel'] != null && variables['nivel'] != undefined ){
+            document.querySelector('[id$="utm_nivel"]').value = variables['nivel'];
+            if(variables['nivel'] == "posgrado" && (variables['programa'] == null && variables['programa'] == undefined )){
+                document.querySelector('[id$="nivelDeEstudio"]').value = 'Posgrado';
+                document.querySelector('[id$="nivelDeEstudio"]').style.display='none';
+                document.querySelector('[id$="lblNivelEstudio"]').style.display='none';
+                getProg();
+            }
+            if(variables['nivel'] == "profesional" && (variables['programa'] == null && variables['programa'] == undefined )){
+                document.querySelector('[id$="nivelDeEstudio"]').value = 'Profesional';
+                document.querySelector('[id$="nivelDeEstudio"]').style.display='none';
+                document.querySelector('[id$="lblNivelEstudio"]').style.display='none';
+                getProg();
+            }
+            if(variables['nivel'] == "prepa" && (variables['programa'] == null && variables['programa'] == undefined )){
+                document.querySelector('[id$="nivelDeEstudio"]').value = 'Prepa UMM';
+                document.querySelector('[id$="nivelDeEstudio"]').style.display='none';
+                document.querySelector('[id$="lblNivelEstudio"]').style.display='none';
+                getProg();
+            }
+        }
+        if(variables['modalidad'] != null && variables['modalidad'] != undefined ){
+            document.querySelector('[id$="utm_modalidad"]').value = variables['modalidad'];
+            if(variables['modalidad'] == "presencial" && (variables['programa'] == null && variables['programa'] == undefined )){
+                document.querySelector('[id$="modalidad"]').value = 'PRESENCIAL';
+                document.querySelector('[id$="modalidad"]').style.display='none';
+                document.querySelector('[id$="lblModalidad"]').style.display='none';
+                getProg();
+            }
+            if(variables['modalidad'] == "virtual" && (variables['programa'] == null && variables['programa'] == undefined )){
+                document.querySelector('[id$="modalidad"]').value = 'VIRTUAL';
+                document.querySelector('[id$="modalidad"]').style.display='none';
+                document.querySelector('[id$="lblModalidad"]').style.display='none';
+                getProg();
+            }
+            document.querySelector('[id$="programa"]').disabled = false;
+        }
+        if(variables['programa'] != null && variables['programa'] != undefined ){
+            hideInputs();
+            document.querySelector('[id$="programa"]').value = variables['programa'];
+            document.querySelector('[id$="programa"]').disabled = false;
+            getNivel();
+            getArea();
+            getMod();
+            getSede();
+        }
+        
+        
+        
+        
+        
+        </script>
+    </apex:page>

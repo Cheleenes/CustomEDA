@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_de_estudios_a_cursar__c</fullName>
+    <externalId>false</externalId>
+    <label>Nivel de estudios a cursar</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Guardería</fullName>
+                <default>false</default>
+                <label>Guardería</label>
+            </value>
+            <value>
+                <fullName>Kinder</fullName>
+                <default>false</default>
+                <label>Kinder</label>
+            </value>
+            <value>
+                <fullName>Primaria</fullName>
+                <default>false</default>
+                <label>Primaria</label>
+            </value>
+            <value>
+                <fullName>Secundaria</fullName>
+                <default>false</default>
+                <label>Secundaria</label>
+            </value>
+            <value>
+                <fullName>Bachillerato Técnico</fullName>
+                <default>false</default>
+                <label>Bachillerato Técnico</label>
+            </value>
+            <value>
+                <fullName>Preparatoria</fullName>
+                <default>false</default>
+                <label>Preparatoria</label>
+            </value>
+            <value>
+                <fullName>Licenciatura</fullName>
+                <default>false</default>
+                <label>Licenciatura</label>
+            </value>
+            <value>
+                <fullName>Maestría</fullName>
+                <default>false</default>
+                <label>Maestría</label>
+            </value>
+            <value>
+                <fullName>Doctorado</fullName>
+                <default>false</default>
+                <label>Doctorado</label>
+            </value>
+            <value>
+                <fullName>En línea Licenciatura</fullName>
+                <default>false</default>
+                <label>En línea Licenciatura</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

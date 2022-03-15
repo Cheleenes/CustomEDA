@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_descarte__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de descarte</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Por descarte por el numero de incidencaias (14 tareas) se descarta la oportunidad con motivo de se llegó al límite de tareas</fullName>
+                <default>false</default>
+                <label>Por descarte por el numero de incidencaias (14 tareas) se descarta la oportunidad con motivo de se llegó al límite de tareas</label>
+            </value>
+            <value>
+                <fullName>Ingreso a otra Universidad, con un campo para seleccionar cual no obligatorio</fullName>
+                <default>false</default>
+                <label>Ingreso a otra Universidad, con un campo para seleccionar cual no obligatorio</label>
+            </value>
+            <value>
+                <fullName>Ya no tiene interés en ingresar a la institución</fullName>
+                <default>false</default>
+                <label>Ya no tiene interés en ingresar a la institución</label>
+            </value>
+            <value>
+                <fullName>Programa no se ajusta a su bnecesidad (relacionado a la oferta académica)</fullName>
+                <default>false</default>
+                <label>Programa no se ajusta a su bnecesidad (relacionado a la oferta académica)</label>
+            </value>
+            <value>
+                <fullName>No tenemos programa de interés (ralacionado a la oferta académica</fullName>
+                <default>false</default>
+                <label>No tenemos programa de interés (ralacionado a la oferta académica</label>
+            </value>
+            <value>
+                <fullName>No cumple con certificado de nivel anterior</fullName>
+                <default>false</default>
+                <label>No cumple con certificado de nivel anterior</label>
+            </value>
+            <value>
+                <fullName>Hace validos los derechos ARCO (ya no quiere ser contactado)</fullName>
+                <default>false</default>
+                <label>Hace validos los derechos ARCO (ya no quiere ser contactado)</label>
+            </value>
+            <value>
+                <fullName>Llamadas de broma</fullName>
+                <default>false</default>
+                <label>Llamadas de broma</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Factores económicos</fullName>
+                <default>false</default>
+                <label>Factores económicos</label>
+            </value>
+            <value>
+                <fullName>Embarazo</fullName>
+                <default>false</default>
+                <label>Embarazo</label>
+            </value>
+            <value>
+                <fullName>Jornada no disponible (se refiere al turno desmertino, matutino)</fullName>
+                <default>false</default>
+                <label>Jornada no disponible (se refiere al turno desmertino, matutino)</label>
+            </value>
+            <value>
+                <fullName>No le interesa la modalidad</fullName>
+                <default>false</default>
+                <label>No le interesa la modalidad</label>
+            </value>
+            <value>
+                <fullName>Motivos personales</fullName>
+                <default>false</default>
+                <label>Motivos personales</label>
+            </value>
+            <value>
+                <fullName>No esta deacuerdo con homologación (se refiere a que no acepto el plan de equivalencias)</fullName>
+                <default>false</default>
+                <label>No esta deacuerdo con homologación (se refiere a que no acepto el plan de equivalencias)</label>
+            </value>
+            <value>
+                <fullName>No obtuvo beca adecuada</fullName>
+                <default>false</default>
+                <label>No obtuvo beca adecuada</label>
+            </value>
+            <value>
+                <fullName>No obtuvo financiamiento</fullName>
+                <default>false</default>
+                <label>No obtuvo financiamiento</label>
+            </value>
+            <value>
+                <fullName>No tuvo permiso en el trabajo (no me dieron el tiempo disponible)</fullName>
+                <default>false</default>
+                <label>No tuvo permiso en el trabajo (no me dieron el tiempo disponible)</label>
+            </value>
+            <value>
+                <fullName>No quizo informar el motivo</fullName>
+                <default>false</default>
+                <label>No quizo informar el motivo</label>
+            </value>
+            <value>
+                <fullName>No se ajusta a la jornada</fullName>
+                <default>false</default>
+                <label>No se ajusta a la jornada</label>
+            </value>
+            <value>
+                <fullName>No tiene capacidad de pago</fullName>
+                <default>false</default>
+                <label>No tiene capacidad de pago</label>
+            </value>
+            <value>
+                <fullName>No tiene tiempo</fullName>
+                <default>false</default>
+                <label>No tiene tiempo</label>
+            </value>
+            <value>
+                <fullName>Precio muy alto</fullName>
+                <default>false</default>
+                <label>Precio muy alto</label>
+            </value>
+            <value>
+                <fullName>Problemas de salud</fullName>
+                <default>false</default>
+                <label>Problemas de salud</label>
+            </value>
+            <value>
+                <fullName>Problemas familiares</fullName>
+                <default>false</default>
+                <label>Problemas familiares</label>
+            </value>
+            <value>
+                <fullName>Siguiente corte (cuando cambia de periodo)</fullName>
+                <default>false</default>
+                <label>Siguiente corte (cuando cambia de periodo)</label>
+            </value>
+            <value>
+                <fullName>Viaje programado</fullName>
+                <default>false</default>
+                <label>Viaje programado</label>
+            </value>
+            <value>
+                <fullName>Aspirante gestionado por la universidad (no se puede contactar, porque alguien de la universidad esta llevando su proceso)</fullName>
+                <default>false</default>
+                <label>Aspirante gestionado por la universidad (no se puede contactar, porque alguien de la universidad esta llevando su proceso)</label>
+            </value>
+            <value>
+                <fullName>Es alumno activo/reingreso</fullName>
+                <default>false</default>
+                <label>Es alumno activo/reingreso</label>
+            </value>
+            <value>
+                <fullName>No hay sede en la zona o región en donde vive</fullName>
+                <default>false</default>
+                <label>No hay sede en la zona o región en donde vive</label>
+            </value>
+            <value>
+                <fullName>No se haya conformado el grupo</fullName>
+                <default>false</default>
+                <label>No se haya conformado el grupo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

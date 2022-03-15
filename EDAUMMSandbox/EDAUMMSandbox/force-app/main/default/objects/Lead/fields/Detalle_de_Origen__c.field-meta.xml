@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detalle_de_Origen__c</fullName>
+    <externalId>false</externalId>
+    <label>Detalle de Origen</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Teléfono</fullName>
+                <default>false</default>
+                <label>Teléfono</label>
+            </value>
+            <value>
+                <fullName>Correo Electrónico</fullName>
+                <default>false</default>
+                <label>Correo Electrónico</label>
+            </value>
+            <value>
+                <fullName>Whats App</fullName>
+                <default>false</default>
+                <label>Whats App</label>
+            </value>
+            <value>
+                <fullName>Chat sitio Web</fullName>
+                <default>false</default>
+                <label>Chat sitio Web</label>
+            </value>
+            <value>
+                <fullName>Chat Instagram</fullName>
+                <default>false</default>
+                <label>Chat Instagram</label>
+            </value>
+            <value>
+                <fullName>Chat Facebok</fullName>
+                <default>false</default>
+                <label>Chat Facebok</label>
+            </value>
+            <value>
+                <fullName>Contáctanos ECCC</fullName>
+                <default>false</default>
+                <label>Contáctanos ECCC</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Teléfono</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Correo Electrónico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Whats App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Chat sitio Web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Chat Instagram</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Captura Manual</controllingFieldValue>
+            <valueName>Chat Facebok</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Formulario Web</controllingFieldValue>
+            <valueName>Contáctanos ECCC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

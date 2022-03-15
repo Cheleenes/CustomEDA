@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jornada__c</fullName>
+    <externalId>false</externalId>
+    <label>Jornada</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EN LINEA</fullName>
+                <default>false</default>
+                <label>EN LINEA</label>
+            </value>
+            <value>
+                <fullName>FIN DE SEMANA</fullName>
+                <default>false</default>
+                <label>FIN DE SEMANA</label>
+            </value>
+            <value>
+                <fullName>MATUTINO</fullName>
+                <default>false</default>
+                <label>MATUTINO</label>
+            </value>
+            <value>
+                <fullName>NOCTURNO</fullName>
+                <default>false</default>
+                <label>NOCTURNO</label>
+            </value>
+            <value>
+                <fullName>SABATINO</fullName>
+                <default>false</default>
+                <label>SABATINO</label>
+            </value>
+            <value>
+                <fullName>VESPERTINO</fullName>
+                <default>false</default>
+                <label>VESPERTINO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
